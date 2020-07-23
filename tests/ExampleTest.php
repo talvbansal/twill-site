@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Talvbansal\TwillSite\Tests;
 
 class ExampleTest extends TestCase
 {
