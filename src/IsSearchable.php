@@ -19,7 +19,7 @@ trait IsSearchable
         $fields = $this->getSearchableFields();
 
         foreach ($fields as $field) {
-            $query->whereRaw("LOWER({$field}) LIKE LOWER(?)", ["%{$search}%"]);
+            $query->orWhereRaw("LOWER({$field}) LIKE LOWER(?)", ["%{$search}%"]);
         }
 
         $query->orWhereHas('blocks', function ($q) use ($search) {
