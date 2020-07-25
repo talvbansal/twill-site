@@ -18,7 +18,7 @@ trait HasPermalinks
 {
     public function getPermalinkAttribute() : string
     {
-        if(!$this->sluggableRoute){
+        if (! $this->sluggableRoute) {
             throw new \Exception("Route to generate permalink for class ".__CLASS__." is not defined. (The \$sluggableRoute property is not defined.)");
         }
 
